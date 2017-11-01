@@ -1,0 +1,28 @@
+{{!< default}}
+
+    <header id="header" data-url="{{@blog.cover_image}}" class="home-header blog-background banner-mask lazy {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+        <div class="nav-header-container">
+             <a href="{{@blog.url}}" class="svg-logo">
+<span class="svg-logo" >
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+</span>
+</a>
+        </div>
+        <div class="header-wrap">
+        <div class="home-info-container">
+            <a href="{{@blog.url}}"><h2>Stay before every beautiful thoughts</h2></a>
+            <h4>在每一个美好的思想前停留</h4>
+            <img src="http://images.10art.cc/headlogo100.png?imageView2/0/format/webp/q/100|imageslim" width="150">
+        </div>
+        <div class="arrow_down" data-offset="-45">
+               <a href="javascript:;"></a>
+        </div>
+    </header>
+{{! The main content area on the homepage }}
+<main id="main" class="content homepage" role="main">
+{{! Each post will be output using this markup }}
+{{> "loop"}}
+{{!! After all the posts, we have the previous/next pagination links }}
+
+{{!-- {{pagination}} --}}
+</main>
